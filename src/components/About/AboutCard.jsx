@@ -8,27 +8,31 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "left" }}>
-            Hey there! I’m <span className="blue">Gohar Wahidy</span> from
+            Hey there! I'm <span className="blue">Gohar Wahidy</span> from
             <span className="blue"> Cedar Falls, Iowa.</span>
             <br />
-            I’m currently pursuing a B.A. in Computer Science at the <span className="blue">University of Northern Iowa</span> and have earned Dean’s List honors every year.
+            I graduated from the <span className="blue">University of Northern Iowa</span> with
+            a bachelor's degree in Computer Science, completing the usual four-year program in
+            three years, and I earned Dean's List honors every year.
             <br />
-            I have hands-on experience in frontend and full-stack development through my job as a frontend developer and manager, as well as through freelance projects and personal work.
+            I'm a software engineer with experience building full-stack applications, backend
+            systems, mobile apps, and responsive websites.
             <br />
-            I specialize in building responsive, high-performance websites and tools using modern technologies like React, Tailwind CSS, Node.js, and Python.
+            I work with React, React Native, Next.js, TypeScript, Python, Node.js, and
+            PostgreSQL, along with APIs, cloud services, real-time systems, and computer vision.
             <br />
             <br />
             Here are a few things I enjoy doing:
           </p>
           <ul>
             <li className="about-activity">
-              <AiFillStar /> Building creative side projects that solve real-life problems
+              <AiFillStar /> Shipping products people can use on the web and on mobile
             </li>
             <li className="about-activity">
               <AiFillStar /> Experimenting with new frameworks and libraries
             </li>
             <li className="about-activity">
-              <AiFillStar /> Exploring AI tools and integrating them
+              <AiFillStar /> Exploring AI, computer vision, and real-time systems
             </li>
           </ul>
         </blockquote>

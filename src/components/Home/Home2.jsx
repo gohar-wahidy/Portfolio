@@ -17,21 +17,31 @@ function Home2() {
               LET ME <span className="blue"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming when I was 17 and haven't stopped building since
+              I fell in love with programming when I was 17, and I haven't stopped building since.
               <br />
-              <br />I am fluent in classics like
+              <br />
+              I earned my bachelor's degree in Computer Science from the University of Northern Iowa, and I now work as a
               <i>
-                <b className="blue"> Python, Java, and Javascript. </b>
+                <b className="blue"> software engineer</b>
               </i>
+              .
               <br />
               <br />
-              My field of interest is building &nbsp;
+              I build across the stack with
               <i>
-                <b className="blue">Modern Web Applications and Tools </b> that solve real world problems
+                <b className="blue"> Python, TypeScript, JavaScript, and Java</b>
               </i>
+              , using React and Next.js for the web, React Native for mobile, and Node.js and PostgreSQL for the backend.
               <br />
               <br />
-              Whenever possible, I love bringing ideas to life by starting with the basics and evolving them into advanced, responsive apps
+              My focus is shipping
+              <i>
+                <b className="blue"> backend systems, mobile apps, and real-time products </b>
+              </i>
+              that people can actually use.
+              <br />
+              <br />
+              Whenever possible, I love taking an idea from a simple prototype to something live on iOS, Android, and the web.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -44,7 +54,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="http://github.com/gohar-wahidy"
+                  href="https://github.com/gohar-wahidy"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-color  home-social-icons"
@@ -54,7 +64,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="http://www.linkedin.com/in/goharwahidy"
+                  href="https://www.linkedin.com/in/goharwahidy"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-color  home-social-icons"

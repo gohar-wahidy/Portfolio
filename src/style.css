@@ -594,12 +594,129 @@ button:focus {
 }
 
 .resume-section {
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-anchor: none;
+  min-height: 100vh;
 }
 
-.resume canvas {
-  max-width: 100% !important;
-  height: auto !important;
+.resume-viewer {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 56px;
+  align-items: center;
+  gap: 12px;
+  width: min(960px, calc(100% - 24px));
+  margin: 40px auto 16px;
+}
+
+.resume-page-wrap {
+  width: 100%;
+  min-width: 0;
+  min-height: 160vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.resume-page-wrap .react-pdf__Document {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-page-wrap .react-pdf__Page {
+  max-width: 100%;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.resume-page-wrap .react-pdf__Page canvas,
+.resume-page-wrap .react-pdf__Page .react-pdf__Page__textContent,
+.resume-page-wrap .react-pdf__Page .react-pdf__Page__annotations {
+  max-width: 100%;
+}
+
+.resume-nav {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #00ccff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.resume-nav svg {
   display: block;
-  margin: 0 auto;
+  pointer-events: none;
+}
+
+.resume-nav circle {
+  fill: currentColor;
+}
+
+.resume-nav:hover:not(:disabled) {
+  color: #66e0ff;
+  transform: scale(1.06);
+}
+
+.resume-nav.is-hidden,
+.resume-nav:disabled {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.resume-page-indicator {
+  text-align: center;
+  margin: 0 0 32px;
+  color: #cfeaf0;
+  letter-spacing: 0.04em;
+}
+
+.resume-status {
+  color: #cfeaf0;
+  text-align: center;
+  padding: 48px 16px;
+}
+
+@media (max-width: 767px) {
+  .resume-viewer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "page page"
+      "prev next";
+    gap: 16px;
+    width: calc(100% - 16px);
+    margin-top: 28px;
+  }
+
+  .resume-page-wrap {
+    grid-area: page;
+  }
+
+  .resume-nav-prev {
+    grid-area: prev;
+    justify-self: end;
+  }
+
+  .resume-nav-next {
+    grid-area: next;
+    justify-self: start;
+  }
+
+  .resume-nav.is-hidden,
+  .resume-nav:disabled {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .resume-viewer:has(.resume-nav-prev.is-hidden) .resume-nav-next:not(.is-hidden),
+  .resume-viewer:has(.resume-nav-next.is-hidden) .resume-nav-prev:not(.is-hidden) {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
 }
